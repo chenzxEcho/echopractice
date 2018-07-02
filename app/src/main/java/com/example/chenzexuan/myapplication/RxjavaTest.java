@@ -29,7 +29,7 @@ public class RxjavaTest {
             (Observable.OnSubscribe<Response>)
                 subscriber -> {
                   Request.Builder builder =
-                      new Request.Builder().url("https://www.baidu.com").get();
+                      new Request.Builder().url("https://api.github.com/users/octocat/orgs").get();
                   Request request = builder.build();
                   Call call = new OkHttpClient().newCall(request);
                   Response response = null;
